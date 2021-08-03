@@ -98,3 +98,7 @@ statemachine (to avoid bounces).
 
 ![boiler management state machine](http://www.plantuml.com/plantuml/proxy?src=https://raw.github.com/HomeMadeBots/Home-Temperature-Controller-System/master/uml/boiler_management_state_machine.iuml)
 
+## Physical architecture
+
+![HTC physical architecture](http://www.plantuml.com/plantuml/proxy?src=https://raw.github.com/HomeMadeBots/Home-Temperature-Controller-System/master/uml/system_physical_arch.iuml.iuml)
+
