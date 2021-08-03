@@ -1,0 +1,19 @@
+@startuml
+
+skinparam defaultTextAlignment center
+
+!includeurl https://gist.githubusercontent.com/Arnaud-Bonneuil/c317a7a30bed7d64e2b5b1f558ac00cf/raw/sober.plantuml
+
+!include <tupadr3/common>
+!include <tupadr3/font-awesome-5/question>
+!include <tupadr3/font-awesome-5/fire>
+!include <tupadr3/font-awesome-5/house_user>
+
+FA5_HOUSE_USER(Home_Occupier,Home occupier)
+FA5_QUESTION(Home_Temperature_Controller,Home temperature controller)
+FA5_FIRE(Boiler,Boiler)
+
+Home_Occupier "1..*" -- "1" Home_Temperature_Controller
+Home_Temperature_Controller "1" -- "1" Boiler
+
+@enduml
