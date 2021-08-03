@@ -1,0 +1,17 @@
+@startuml
+
+!includeurl https://gist.githubusercontent.com/Arnaud-Bonneuil/c317a7a30bed7d64e2b5b1f558ac00cf/raw/sober.plantuml
+
+skinparam linetype ortho
+
+[*] --> Boiler_Deactivation_Requested
+
+Boiler_Deactivation_Requested : entry/ Open the electrical circuit that controll the boiler
+
+Boiler_Activation_Requested : entry/ Close the electrical circuit that controll the boiler
+
+Boiler_Deactivation_Requested --> Boiler_Activation_Requested : Home temperature < Targeted temperature for 2min
+
+Boiler_Activation_Requested ----> Boiler_Deactivation_Requested : Home temperature > Targeted temperature for 30sec
+
+@enduml
