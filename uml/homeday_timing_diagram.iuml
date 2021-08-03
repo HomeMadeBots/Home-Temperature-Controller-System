@@ -1,0 +1,23 @@
+@startuml
+
+!includeurl https://gist.githubusercontent.com/Arnaud-Bonneuil/c317a7a30bed7d64e2b5b1f558ac00cf/raw/sober.plantuml
+
+caption Targeted temperature on "Homeday"
+
+robust "Targeted temperature" as TT
+
+scale 1 as 35 pixels
+
+@0
+TT is LOW
+
+@6.5
+TT is HIGH
+
+@22
+TT is LOW
+
+@23
+TT is LOW
+
+@enduml
