@@ -92,3 +92,10 @@ On Wednesday and Thursday (home office) and on Saturday and Sunday (weekend),
 the HTC shall regualte the home temperature to the targeted temperature ("Low"
 or "High") depending on the clock as specified on the timing diagram within the
 "Homeday mode" chapter.
+
+#### Boiler management
+The boiler shall be activated or desactivated according to the following
+statemachine (to avoid bounces).
+
+![boiler management state machine](http://www.plantuml.com/plantuml/proxy?src=https://raw.github.com/HomeMadeBots/Home-Temperature-Controller-System/master/uml/boiler_management_state_machine.iuml)
+
