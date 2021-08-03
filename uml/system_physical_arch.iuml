@@ -1,0 +1,49 @@
+@startuml
+
+skinparam defaultTextAlignment center
+
+!includeurl https://gist.githubusercontent.com/Arnaud-Bonneuil/c317a7a30bed7d64e2b5b1f558ac00cf/raw/sober.plantuml
+
+!include <tupadr3/common>
+
+!include <tupadr3/material/battery_std>
+!include <tupadr3/font-awesome-5/microchip>
+!include <tupadr3/font-awesome-5/fire>
+!include <tupadr3/weather/thermometer>
+!include <tupadr3/material/keyboard>
+!include <tupadr3/material/stay_current_landscape>
+
+!includeurl https://gist.githubusercontent.com/Arnaud-Bonneuil/295d5dd4dd312a7c925c8655af7ec434/raw/sprite_relay.puml
+
+
+FA5_FIRE(Boiler,Boiler)
+
+rectangle "Home Temperature Controller" {
+  
+rectangle "<color:black><$relay></color>\r Relay" as Relay
+
+FA5_MICROCHIP(Leonardo, Leonardo)
+
+MATERIAL_BATTERY_STD(Battery,Battery)
+
+WEATHER_THERMOMETER(DS18B20,DS18B20)
+
+MATERIAL_KEYBOARD(Keypad,Keypad)
+
+MATERIAL_STAY_CURRENT_LANDSCAPE(LCD,LCD)
+
+  }
+
+Boiler #--# Relay
+
+Relay #-right-# Leonardo
+
+Leonardo #--# DS18B20 : 1-Wire
+
+Leonardo #--# Keypad : analog signal
+
+Leonardo #--# Battery : power
+
+Leonardo #-right-# LCD : digital signals
+
+@enduml
