@@ -77,3 +77,32 @@ statemachine (to avoid bounces) :
 
 ![HTC physical architecture](http://www.plantuml.com/plantuml/proxy?src=https://raw.github.com/HomeMadeBots/Home-Temperature-Controller-System/master/uml/system_physical_arch.iuml)
 
+Note that the battery actually provides power to the Arduino board, the LCD and
+the relay.
+
+### DS18B20
+
+It is a digital air temperature sensor. Information is sent to/from the DS18B20
+over a 1-Wire interface.
+
+### LCD
+
+It is a liquid cristal display drived using a HD44780 device. Seven digital pins
+are needed.
+
+### Keypad
+
+It is a five buttons keypad connected to only one analog pin. The key value is
+read through a five stages voltage divider.
+
+### Relay
+
+It is a normally open power relay drived through a digital pin.
+
+### Arduino
+
+It is an Arduino board (i.e. Leonardo).
+
+## Electrical diagram
+
+## Embedded software

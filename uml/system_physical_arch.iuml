@@ -18,32 +18,20 @@ skinparam defaultTextAlignment center
 
 FA5_FIRE(Boiler,Boiler)
 
-rectangle "Home Temperature Controller" {
-  
-rectangle "<color:black><$relay></color>\r Relay" as Relay
-
-FA5_MICROCHIP(Leonardo, Leonardo)
-
-MATERIAL_BATTERY_STD(Battery,Battery)
-
-WEATHER_THERMOMETER(DS18B20,DS18B20)
-
-MATERIAL_KEYBOARD(Keypad,Keypad)
-
-MATERIAL_STAY_CURRENT_LANDSCAPE(LCD,LCD)
-
-  }
+rectangle "Home Temperature Controller" { 
+  rectangle "<color:black><$relay></color>\r Relay" as Relay
+  FA5_MICROCHIP(Arduino, Arduino)
+  MATERIAL_BATTERY_STD(Battery,Battery)
+  WEATHER_THERMOMETER(DS18B20,DS18B20)
+  MATERIAL_KEYBOARD(Keypad,Keypad)
+  MATERIAL_STAY_CURRENT_LANDSCAPE(LCD,LCD)
+}
 
 Boiler #--# Relay
-
-Relay #-right-# Leonardo
-
-Leonardo #--# DS18B20 : 1-Wire
-
-Leonardo #--# Keypad : analog signal
-
-Leonardo #--# Battery : power
-
-Leonardo #-right-# LCD : digital signals
+Relay #-right-# Arduino : digital signal
+Arduino #--# DS18B20 : 1-Wire
+Arduino #--# Keypad : analog signal
+Arduino #--# Battery : power
+Arduino #-right-# LCD : 7 digital signals
 
 @enduml
