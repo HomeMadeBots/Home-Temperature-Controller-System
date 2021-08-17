@@ -3,7 +3,7 @@ Describes a system allowing to control the temperature of your home.
 
 ## System overview
 
-![system overview](http://www.plantuml.com/plantuml/proxy?src=https://raw.github.com/HomeMadeBots/Home-Temperature-Controller-System/master/uml/system_overview.iuml)
+![system overview](http://www.plantuml.com/plantuml/proxy?src=https://raw.github.com/HomeMadeBots/Home-Temperature-Controller-System/master/uml/system_overview.puml)
 
 ### Boiler
 The system "Boiler" is a home boiler that can be activated or deactivated by
@@ -55,13 +55,13 @@ targeted "Low" temperature.
 * In "Homeday mode", the HTC shall regulate the home temperature to the
 targeted temperature (Low or High) depending on the clock as specified on the
 following timing diagram.  
-![homeday timing diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.github.com/HomeMadeBots/Home-Temperature-Controller-System/master/uml/homeday_timing_diagram.iuml)
+![homeday timing diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.github.com/HomeMadeBots/Home-Temperature-Controller-System/master/uml/homeday_timing_diagram.puml)
 * In "Normal" mode, the HTC shall regulate the home temperature depending on the
 week day.  
 On Monday, Tuesday and Friday, the system shall regulate the home temperature to
 the targeted temperature ("Low" or "High") depending on the clock as specified
 on the following timing diagram :  
-![workday timing diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.github.com/HomeMadeBots/Home-Temperature-Controller-System/master/uml/workday_timing_diagram.iuml)  
+![workday timing diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.github.com/HomeMadeBots/Home-Temperature-Controller-System/master/uml/workday_timing_diagram.puml)  
 On Wednesday and Thursday (home office) and on Saturday and Sunday (weekend),
 the HTC shall regualte the home temperature to the targeted temperature ("Low"
 or "High") depending on the clock as specified on the timing diagram for the
@@ -71,11 +71,11 @@ or "High") depending on the clock as specified on the timing diagram for the
 
 * The boiler shall be activated or desactivated according to the following
 statemachine (to avoid bounces) :  
-![boiler management state machine](http://www.plantuml.com/plantuml/proxy?src=https://raw.github.com/HomeMadeBots/Home-Temperature-Controller-System/master/uml/boiler_management_state_machine.iuml)
+![boiler management state machine](http://www.plantuml.com/plantuml/proxy?src=https://raw.github.com/HomeMadeBots/Home-Temperature-Controller-System/master/uml/boiler_management_state_machine.puml)
 
 ## Physical architecture
 
-![HTC physical architecture](http://www.plantuml.com/plantuml/proxy?src=https://raw.github.com/HomeMadeBots/Home-Temperature-Controller-System/master/uml/system_physical_arch.iuml)
+![HTC physical architecture](http://www.plantuml.com/plantuml/proxy?src=https://raw.github.com/HomeMadeBots/Home-Temperature-Controller-System/master/uml/system_physical_arch.puml)
 
 Note that the battery actually provides power to the Arduino board, the LCD and
 the relay.
