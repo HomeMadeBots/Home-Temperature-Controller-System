@@ -46,13 +46,13 @@ temperature.
 ### Modes setting
 
 * The HTC shall allow the occupier to choose among 4 different operating modes
-(Low, High, Normal, Holiday).
+(Low, High, Normal, Homeday).
 * The HTC shall display the mode choosen by the occupier.
 * In "High" mode, the HTC shall regulate the home temperature to the configured
 targeted "High" temperature.
 * In "Low" mode, the HTC shall regulate the home temperature to the configured
 targeted "Low" temperature.
-* In "Homeday mode", the HTC shall regulate the home temperature to the
+* In "Homeday" mode, the HTC shall regulate the home temperature to the
 targeted temperature (Low or High) depending on the clock as specified on the
 following timing diagram.  
 ![homeday timing diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.github.com/HomeMadeBots/Home-Temperature-Controller-System/master/uml/homeday_timing_diagram.puml)
@@ -65,7 +65,7 @@ on the following timing diagram :
 On Wednesday and Thursday (home office) and on Saturday and Sunday (weekend),
 the HTC shall regualte the home temperature to the targeted temperature ("Low"
 or "High") depending on the clock as specified on the timing diagram for the
-"Homeday mode".
+"Homeday" mode.
 
 ### Boiler management
 
@@ -106,3 +106,6 @@ It is an Arduino board (i.e. Leonardo).
 ## Electrical diagram
 
 ## Embedded software
+
+The software loaded on the Arduino board of the HTC is described in 
+[this repository](https://github.com/HomeMadeBots/Home_Temperature_Controller).
