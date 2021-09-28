@@ -105,6 +105,12 @@ It is an Arduino board (i.e. Leonardo).
 
 ## Electrical diagram
 
+![HTC electrical schema](elec/htc.png)
+
+This schema has been realized with [QElectroTech](https://qelectrotech.org/).  
+Some elements used on this schema are stored in
+[this repository](https://github.com/HomeMadeBots/Electrical-Diagrams).
+
 ## Embedded software
 
 The software loaded on the Arduino board of the HTC is described in 
